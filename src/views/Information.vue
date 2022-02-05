@@ -11,7 +11,6 @@
 <script>
 import Instructions from '@/components/Instructions.vue';
 import EasterEgg from '@/components/EasterEgg.vue';
-// import { EventBus } from '@/utils/eventBus';
 
 export default {
   name: 'Information',
@@ -27,8 +26,6 @@ export default {
   methods: {
     upCounter() {
       this.counter += 1;
-      console.log('AUMENTAMOS A', this.counter);
-      // EventBus.$emit('check-counter', this.counter);
     },
   },
 };
