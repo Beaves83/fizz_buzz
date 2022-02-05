@@ -5,10 +5,12 @@
       In this game you could see the functionality of Fizz Buzz for numbers 1 to 100.
     </p>
     <button class="btn btn-primary text-white"
-    @click="executeGame">Ready Player One</button>
+    @click="executeGame">Ready Player One!</button>
     <div class="card card-body mt-5" style="width: 50rem;">
       <p class="card-text pb-5 text-justify">{{(solution.length > 0) ? solution : ''}}</p>
     </div>
+     <button v-if="solution.length>0" class="btn btn-danger text-white btn-sm "
+    @click="cleanSolution">Reset</button>
   </div>
 </template>
 
@@ -25,7 +27,7 @@ export default {
   },
   methods: {
     executeGame() {
-      this.solution.splice(0, this.solution.length);
+      this.cleanSolution();
       for (let i = 1; i <= 100; i += 1) {
         if ((i % 3 === 0) && (i % 5 === 0)) {
           this.solution.push('Fizz Buzz');
@@ -37,6 +39,9 @@ export default {
           this.solution.push(i);
         }
       }
+    },
+    cleanSolution() {
+      this.solution.splice(0, this.solution.length);
     },
   },
 };
