@@ -1,8 +1,10 @@
 <template>
   <div class="information">
-    <img alt="Info image" src="../assets/information.png">
-    <h1>This is the information about de game</h1>
-    <Instructions />
+    <img alt="Info" class="pb-5" src="../assets/information.png">
+    <div class="card card-body" style="width: 50rem;">
+      <h1 class="card-title">This is the information about de game</h1>
+      <Instructions />
+    </div>
   </div>
 </template>
 <script>
@@ -15,3 +17,6 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+
+</style>
